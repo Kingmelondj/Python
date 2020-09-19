@@ -12,22 +12,12 @@ with conn:
 conn.close()
 
 
+
+
+conn = sqlite3.connect('fileList.db')
 list1 = ['information.docx', 'Hello.txt', 'myImage.png', \
         'myMovie.mpg', 'World.txt', 'data.pdf', 'myPhoto.jpg']
 for file in list1:
     if file.endswith('txt'):
         print(file)
-
-conn = sqlite3.connect('fileList.db')
-    SELECT FROM list1
-with conn:
-    cur = conn.cursor()
-    cur.execute("INSERT INTO tbl_fileList(Hello.txt, World.txt) VALUES (?, ?)", \
-                (''))
-    conn.commit()
-
-
         
-
-
-
